@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<div class="container">
+    <h1>Connectez-vous :</h1>
+    <form action="/profil" method="post" class="form-auth">
+        <label>
+            <span title="Votre email">Email</span><span title="Champ obligatoire">*</span>
+            <input type="email" name="email" required>
+        </label>
+        <label>
+            Mot de passe <span title="Champ obligatoire">*</span>
+            <input type="text" name="password" required>
+        </label>
+        <button type="submit">Connexion</button>
+    </form>
+    <a href="/reg">Pas de compte ? Suivez-moi</a>
+</div>
+<%- include('partials/footer') %>

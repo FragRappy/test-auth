@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+<div class="container">
+    <h1>Inscription :</h1>
+    <form action="/reg/confirm" method="post" class="form-auth">
+        <label>
+            <span title="Votre prénom">Prénom</span><span title="Champ obligatoire">*</span>
+            <input type="text" name="firstname" required>
+        </label>
+        <label>
+            <span title="Votre nom">Nom</span><span title="Champ obligatoire">*</span>
+            <input type="text" name="lastname" required>
+        </label>
+        <label>
+            <span title="Votre email">Email</span><span title="Champ obligatoire">*</span>
+            <input type="email" name="email" required>
+        </label>
+        <label>
+            <span title="8 caratères minimum comprenant 1 maj, 1min, 1 caractère spécial et 1 chiffre">Mot de passe</span><span title="Champ obligatoire">*</span>
+            <input type="text" name="password" required>
+        </label>
+        <label>
+            <span title="Re-tapez votre mot de passe">Confirmation mot de passe</span><span title="Champ obligatoire">*</span>
+            <input type="text" name="confirmPassword" required>
+        </label>
+        <button type="submit">C'est parti !</button>
+    </form>
+    <a href="/auth">Déjà un compte ? c'est par ici</a>
+</div>
+<%- include('partials/footer') %>

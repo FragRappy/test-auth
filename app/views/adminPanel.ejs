@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+    <div class="container">
+        <h1>Bienvenue sur votre espace administrateur : <%= user.fullname %></h1>
+        <p>il y a actuellement <%= users.length %> inscrit sur le site</p>
+        <ul>
+            <% for (const sub of users) { %>
+                <li>Nom: <%= sub.fullname %> - Statut: <%= sub.role %></li>
+            <% } %>
+        </ul>
+    </div>
+<%- include('partials/footer') %>

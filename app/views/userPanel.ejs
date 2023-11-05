@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+    <div class="container">
+        <h1>Bienvenue sur votre espace membre : <%= user.fullname %></h1>
+        <p>Votre Prénom : <%= user.firstname %></p>
+        <p>Votre Nom : <%= user.lastname %></p>
+        <p>Votre email : <%= user.email %></p>
+        <p>Votre statut : <%= user.role %></p>
+    </div>
+<%- include('partials/footer') %>

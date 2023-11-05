@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>NullMarket</title>
+</head>
+<body>
+    <header>
+        <nav class="menu" id="top">
+            <a href="/">Accueil</a>
+            <ul>
+                <li class="menu-roll"><a href="#">Produits neufs</a>
+                    <ul class="menu-unroll">
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Tablettes</a></li>
+                        <li><a href="#">Montres connectées</a></li>
+                    </ul>
+                </li>
+                <li class="menu-roll"><a href="#">Produits d'occasions</a>
+                    <ul class="menu-unroll">
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Tablettes</a></li>
+                        <li><a href="#">Montres connectées</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <% if (user) { %>
+                    <% if (user.role === 'admin') { %>
+                        <li><a href="/profil"><%= user.fullname %></a></li>
+                    <% } else if (user.role === 'membre' || user.role === 'vip') { %>
+                        <li><a href="/profil"><%= user.fullname %></a></li>
+                        <li><a href="#"><%= basket <1 ? "Panier" : basket >1 ? `${basket} articles` : `${basket} article` %></a></li>
+                    <% } else {%>
+                        <li><a href="/auth">Connexion</a></li>
+                        <li><a href="#"><%= basket <1 ? "Panier" : basket >1 ? `${basket} articles` : `${basket} article` %></a></li>
+                    <% } %>
+                <% } else {%>
+                    <li><a href="/auth">Connexion</a></li>
+                    <li><a href="#"><%= basket <1 ? "Panier" : basket >1 ? `${basket} articles` : `${basket} article` %></a></li>
+                <% } %>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+   
